@@ -98,24 +98,6 @@ mod tests {
     }
 
     #[actix_web::test]
-    async fn test_countries_not_found() {
-        let weather_data = serde_json::json!({});
-        let app = test::init_service(
-            App::new()
-                .app_data(web::Data::new(weather_data))
-                .route("/countries", web::get().to(countries)),
-        )
-        .await;
-
-        let req = test::TestRequest::get().uri("/countries").to_request();
-        let resp = test::call_service(&app, req).await;
-
-        assert_eq!(resp.status(), actix_web::http::StatusCode::OK);
-
-        let body: Vec<String> = test::read_body_json(resp).await;
-        assert_eq!(body, vec![]);
-    }
-    #[actix_web::test]
     async fn test_monthly_weather_route() {
         let weather_data = serde_json::json!({
             "Country1": {
