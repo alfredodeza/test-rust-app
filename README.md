@@ -1,6 +1,6 @@
 # Rust Weather API
 
-This is a Rust-based HTTP API for retrieving weather data. The application uses `actix-web` as the web framework and `serde` for JSON serialization and deserialization. It provides endpoints to fetch weather data for various countries, cities, and months.
+This is a Rust-based HTTP API for retrieving weather data. The application uses `actix-web` as the web framework and `serde` for JSON serialization and deserialization. It provides endpoints to fetch weather data for various countries, cities, and months. Thisn is awesome
 
 ## Features
 
